@@ -28,7 +28,7 @@ jobs:
         python -m pip install snakemake
     - name: Test
       env:
-        GCF_DB: ./test/src/gcfdb
-      working-directory: ./test
+        GCF_DB: ./tests/src/gcfdb
+      working-directory: ./tests
       run: |
         snakemake -n -p -j1 bfq_all
