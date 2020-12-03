@@ -29,5 +29,6 @@ jobs:
     - name: Test
       env:
         GCF_DB: ./test/src/gcfdb
+      working-directory: ./test
       run: |
-        cd .test && snakemake -n -p -j1 bfq_all
+        snakemake -n -p -j1 bfq_all
