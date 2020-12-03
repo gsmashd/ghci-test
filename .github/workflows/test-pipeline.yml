@@ -30,7 +30,7 @@ jobs:
         ls -la
     - name: Test
       env:
-        GCF_DB: ./tests/src/gcfdb
-      working-directory: ./tests
+        GCF_DB: ./.tests/src/gcfdb
+      working-directory: ./.tests
       run: |
         snakemake -n -p -j1 bfq_all
