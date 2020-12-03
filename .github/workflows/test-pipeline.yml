@@ -27,6 +27,7 @@ jobs:
         python -m pip install --upgrade pip
         python -m pip install snakemake
         pwd
+        ls -la
     - name: Test
       env:
         GCF_DB: ./tests/src/gcfdb
