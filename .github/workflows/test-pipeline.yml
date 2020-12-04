@@ -1,12 +1,8 @@
 # This workflow will install snakemake and test rule bfq_all
 
-name: Python package
+name: Test pipeline
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+on: [push, pull_request]
 
 jobs:
   build:
