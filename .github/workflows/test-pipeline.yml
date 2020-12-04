@@ -27,6 +27,10 @@ jobs:
         python -m pip install --upgrade pip
         python -m pip install snakemake pyyaml==5.3.1 
         python --version
+    - name: Checkout gcfdb:bfq-dev
+      working-directory: ./.tests/src/
+      run: | 
+        git clone --branch bfq-dev https://github.com/gcfntnu/gcfdb.git
     - name: Dry run bfq_all
       env:
         GCF_DB: ./src/gcfdb
